@@ -1,11 +1,298 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id" data-theme="dark">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sinalsal Swimming</title>
+
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="landingPage.css">
 </head>
-<body>
-    
+
+<body class="sinalSwim-body">
+
+    <header class="sinalSwim-navbar-container">
+        <nav class="sinalSwim-navbar">
+
+            <a href="landingPage.html" class="sinalSwim-nav-brand">
+                <img src="../Assets/Photos/logoClub.jpeg" alt="Logo Sinalsal Swimming" class="sinalSwim-logo-img">
+            </a>
+
+            <button class="sinalSwim-mobile-menu-btn" id="sinalSwimMobileBtn" aria-label="Toggle Menu">☰</button>
+
+            <ul class="sinalSwim-nav-menu" id="sinalSwimNavMenu">
+                <li><a href="#hero" class="sinalSwim-nav-link active" data-i18n="nav_home">Beranda</a></li>
+                <li><a href="#programs" class="sinalSwim-nav-link" data-i18n="nav_programs">Program</a></li>
+                <li><a href="#why-us" class="sinalSwim-nav-link" data-i18n="nav_why">Keunggulan</a></li>
+                <li><a href="#contact" class="sinalSwim-nav-link" data-i18n="nav_contact">Kontak</a></li>
+            </ul>
+
+            <div class="sinalSwim-nav-controls">
+                <div class="sinalSwim-lang-switcher" id="sinalSwimLangSwitcher" data-selected="id">
+                    <div class="sinalSwim-lang-glider"></div>
+                    <button class="sinalSwim-lang-btn active" data-lang="id" type="button">IN</button>
+                    <button class="sinalSwim-lang-btn" data-lang="en" type="button">EN</button>
+                </div>
+
+                <button class="sinalSwim-theme-toggle" id="sinalSwimThemeToggle" type="button"
+                    aria-label="Toggle Theme">
+                    <span>☀️</span>
+                    <span>🌙</span>
+                    <div class="sinalSwim-theme-slider"></div>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="sinalSwim-main">
+
+        <div class="sinalSwim-global-bg-video-wrapper">
+            <video autoplay muted loop playsinline class="sinalSwim-main-bg-video">
+                <source src="../Assets/Videos/bgVid.mp4" type="video/mp4">
+            </video>
+            <div class="sinalSwim-main-bg-overlay"></div>
+        </div>
+
+        <section class="sinalSwim-hero-section" id="hero">
+
+            <div class="sinalSwim-slider-wrapper">
+                <div class="sinalSwim-slider-track" id="sinalSwimSliderTrack">
+                    
+                    <div class="sinalSwim-slide active">
+                        <div class="sinalSwim-slide-media">
+                            <img src="../Assets/Photos/logoLandscape.png" alt="Sinalsal Swimming">
+                        </div>
+                        <div class="sinalSwim-slide-overlay"></div>
+                        <div class="sinalSwim-slide-content">
+                            <span class="sinalSwim-tag" data-i18n="slide1_tag">⚡ 1-ON-1 COACHING & ACCELERATED PROGRESS</span>
+                            <h1 class="sinalSwim-slide-title" data-i18n="slide1_title">
+                                Kuasai Air, Bangun Fisik & <span class="sinalSwim-gradient-text">Level Up</span>
+                            </h1>
+                            <div class="sinalSwim-hero-tagline-box">
+                                <div class="sinalSwim-tagline-text" data-i18n="hero_tagline">
+                                    “Be formless, shapeless, like water. You put water into a cup, it becomes the cup.”
+                                </div>
+                                <span class="sinalSwim-tagline-author" data-i18n="hero_tagline_author">— Bruce Lee</span>
+                            </div>
+                            <p class="sinalSwim-slide-desc" data-i18n="slide1_desc">
+                                Pelatihan privat renang intensif langsung bersama 1 pelatih utama, bertahap hingga mahir.
+                            </p>
+                            <div class="sinalSwim-cta-group">
+                                <a href="#programs" class="sinalSwim-btn sinalSwim-btn-primary" data-i18n="btn_explore">Pilih Program →</a>
+                                <a href="https://wa.me/6281370508839?text=Halo%20Coach%20Sinalsal,%20mau%20tanya%20jadwal" target="_blank" class="sinalSwim-btn sinalSwim-btn-outline" data-i18n="btn_wa">WhatsApp Coach</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sinalSwim-slide">
+                        <div class="sinalSwim-slide-media">
+                            <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=1600&q=80" alt="Latihan Binsik">
+                        </div>
+                        <div class="sinalSwim-slide-overlay"></div>
+                        <div class="sinalSwim-slide-content">
+                            <span class="sinalSwim-tag" data-i18n="slide2_tag">🎯 TARGET NILAI TINGGI</span>
+                            <h2 class="sinalSwim-slide-title" data-i18n="slide2_title">
+                                Persiapan Pembinaan <span class="sinalSwim-gradient-text">Fisik</span>
+                            </h2>
+                            <div class="sinalSwim-hero-tagline-box">
+                                <div class="sinalSwim-tagline-text" data-i18n="slide2_quote">
+                                    “Disiplin adalah jembatan antara impian dan pencapaian.”
+                                </div>
+                                <span class="sinalSwim-tagline-author">— Military Fitness Mindset</span>
+                            </div>
+                            <p class="sinalSwim-slide-desc" data-i18n="slide2_desc">
+                                Program Latihan Fisik Terukur untuk Tes Binsik dan peningkatan performa.
+                            </p>
+                            <div class="sinalSwim-cta-group">
+                                <a href="javascript:void(0)" class="sinalSwim-btn sinalSwim-btn-primary sinalSwim-coming-soon" data-i18n="btn_binsik">Detail Binsik →</a>
+                                <a href="https://wa.me/6281370508839?text=Halo%20Coach,%20saya%20tertarik%20program%20Binsik" target="_blank" class="sinalSwim-btn sinalSwim-btn-outline" data-i18n="btn_wa">Konsultasi Tes</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sinalSwim-slide">
+                        <div class="sinalSwim-slide-media">
+                            <img src="https://images.unsplash.com/photo-1530549387789-4c1017266635?w=1600&q=80" alt="Les Renang Anak & Dewasa">
+                        </div>
+                        <div class="sinalSwim-slide-overlay"></div>
+                        <div class="sinalSwim-slide-content">
+                            <span class="sinalSwim-tag" data-i18n="slide3_tag">🏊 RAMAH UNTUK SEMUA USIA</span>
+                            <h2 class="sinalSwim-slide-title" data-i18n="slide3_title">
+                                Dari Nol Sampai <span class="sinalSwim-gradient-text">Percaya Diri di Air</span>
+                            </h2>
+                            <div class="sinalSwim-hero-tagline-box">
+                                <div class="sinalSwim-tagline-text" data-i18n="slide3_quote">
+                                    “Tidak ada kata terlambat untuk mempelajari skill bertahan hidup terbaik.”
+                                </div>
+                                <span class="sinalSwim-tagline-author">— Water Safety Principles</span>
+                            </div>
+                            <p class="sinalSwim-slide-desc" data-i18n="slide3_desc">
+                                Metode pengajaran ramah untuk balita, anak, pemula dewasa, hingga perbaikan gaya atlet.
+                            </p>
+                            <div class="sinalSwim-cta-group">
+                                <a href="../SwimmingClub/Profile/profileRenang.html" class="sinalSwim-btn sinalSwim-btn-primary" data-i18n="btn_renang">Detail Les Renang →</a>
+                                <a href="https://wa.me/6281370508839?text=Halo%20Coach,%20mau%20daftar%20les%20renang" target="_blank" class="sinalSwim-btn sinalSwim-btn-outline" data-i18n="btn_wa">Tanya Jadwal</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sinalSwim-slide">
+                        <div class="sinalSwim-slide-media">
+                            <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=1600&q=80" alt="Bimbel Akademik">
+                        </div>
+                        <div class="sinalSwim-slide-overlay"></div>
+                        <div class="sinalSwim-slide-content">
+                            <span class="sinalSwim-tag" data-i18n="slide4_tag">📚 AKADEMIK INTENSIF</span>
+                            <h2 class="sinalSwim-slide-title" data-i18n="slide4_title">
+                                Berbagai macam <span class="sinalSwim-gradient-text">Bimbel Akademik</span>
+                            </h2>
+                            <div class="sinalSwim-hero-tagline-box">
+                                <div class="sinalSwim-tagline-text" data-i18n="slide4_quote">
+                                    “Fisik yang kuat harus diimbangi dengan pikiran yang tajam dan terasah.”
+                                </div>
+                                <span class="sinalSwim-tagline-author">— Academic Excellence</span>
+                            </div>
+                            <p class="sinalSwim-slide-desc" data-i18n="slide4_desc">
+                                Bimbingan belajar Matematika, Bahasa Inggris, IPA, IPS, dan mata pelajaran lainnya.
+                            </p>
+                            <div class="sinalSwim-cta-group">
+                                <a href="javascript:void(0)" class="sinalSwim-btn sinalSwim-btn-primary sinalSwim-coming-soon" data-i18n="btn_bimbel">Detail Bimbel →</a>
+                                <a href="https://wa.me/6281370508839?text=Halo%20Coach,%20mau%20tanya%20bimbel%20akademik" target="_blank" class="sinalSwim-btn sinalSwim-btn-outline" data-i18n="btn_wa">Tanya Program</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="sinalSwim-slider-btn sinalSwim-slider-prev" id="sinalSwimPrevBtn" aria-label="Slide Sebelumnya">‹</button>
+                <button class="sinalSwim-slider-btn sinalSwim-slider-next" id="sinalSwimNextBtn" aria-label="Slide Selanjutnya">›</button>
+
+                <div class="sinalSwim-slider-dots" id="sinalSwimDotsContainer"></div>
+            </div>
+        </section>
+
+        <section class="sinalSwim-section" id="programs">
+            <div class="sinalSwim-section-header">
+                <span class="sinalSwim-sub-title">PROGRAMS</span>
+                <h2 class="sinalSwim-section-title" data-i18n="sec_program_title">Pilih Program Pelatihan</h2>
+            </div>
+
+            <div class="sinalSwim-cards-grid">
+                
+                <div class="sinalSwim-card">
+                    <div class="sinalSwim-card-bg">
+                        <img src="https://images.unsplash.com/photo-1519315901367-f34ff9154487?w=800&q=80" alt="Private Renang">
+                    </div>
+                    <div class="sinalSwim-card-overlay"></div>
+                    <div class="sinalSwim-card-content">
+                        <div class="sinalSwim-card-icon">🏊‍♂️</div>
+                        <h3 class="sinalSwim-card-title" data-i18n="card1_title">Private Renang</h3>
+                        <p class="sinalSwim-card-desc" data-i18n="card1_desc">Dari nol/takut air sampai mahir gaya dada, bebas, punggung, & kupu-kupu.</p>
+                        <a href="../SwimmingClub/Profile/profileRenang.html" class="sinalSwim-card-btn" data-i18n="card_link">Detail Program →</a>
+                    </div>
+                </div>
+
+                <div class="sinalSwim-card">
+                    <div class="sinalSwim-card-bg">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80" alt="Binsik Fisik">
+                    </div>
+                    <div class="sinalSwim-card-overlay"></div>
+                    <div class="sinalSwim-card-content">
+                        <div class="sinalSwim-card-icon">🏋️‍♂️</div>
+                        <h3 class="sinalSwim-card-title" data-i18n="card2_title">Binsik</h3>
+                        <p class="sinalSwim-card-desc" data-i18n="card2_desc">Latihan meningkatkan kebugaran, daya tahan tubuh, dan kelincahan tes fisik.</p>
+                        <a href="javascript:void(0)" class="sinalSwim-card-btn sinalSwim-coming-soon" data-i18n="card_link">Detail Program →</a>
+                    </div>
+                </div>
+
+                <div class="sinalSwim-card">
+                    <div class="sinalSwim-card-bg">
+                        <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=800&q=80" alt="Bimbel Akademik">
+                    </div>
+                    <div class="sinalSwim-card-overlay"></div>
+                    <div class="sinalSwim-card-content">
+                        <div class="sinalSwim-card-icon">📚</div>
+                        <h3 class="sinalSwim-card-title" data-i18n="card3_title">Bimbel Mata Pelajaran</h3>
+                        <p class="sinalSwim-card-desc" data-i18n="card3_desc">Pendampingan akademik Matematika, IPA/IPS, Bahasa Inggris, TPA, dll.</p>
+                        <a href="javascript:void(0)" class="sinalSwim-card-btn sinalSwim-coming-soon" data-i18n="card_link">Detail Program →</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="sinalSwim-section" id="why-us">
+            <div class="sinalSwim-section-header">
+                <span class="sinalSwim-sub-title">ADVANTAGES</span>
+                <h2 class="sinalSwim-section-title" data-i18n="sec_why_title">Kenapa Latihan di Sini?</h2>
+            </div>
+
+            <div class="sinalSwim-focus-grid">
+                <div class="sinalSwim-focus-item">
+                    <div class="sinalSwim-focus-icon">🎯</div>
+                    <h3 class="sinalSwim-focus-title" data-i18n="why1_title">1-on-1 Dedicated Coach</h3>
+                    <p class="sinalSwim-focus-desc" data-i18n="why1_desc">Fokus penuh 1 pelatih tanpa distraksi. Metode disesuaikan 100% dengan kebutuhan dan batas fisikmu.</p>
+                </div>
+
+                <div class="sinalSwim-focus-item">
+                    <div class="sinalSwim-focus-icon">📈</div>
+                    <h3 class="sinalSwim-focus-title" data-i18n="why2_title">Progress Cepat & Terukur</h3>
+                    <p class="sinalSwim-focus-desc" data-i18n="why2_desc">Setiap sesi dipantau langsung—mulai dari efisiensi kayuhan, catatan waktu, hingga daya tahan nafas.</p>
+                </div>
+
+                <div class="sinalSwim-focus-item">
+                    <div class="sinalSwim-focus-icon">⏰</div>
+                    <h3 class="sinalSwim-focus-title" data-i18n="why3_title">Waktu & Lokasi Fleksibel</h3>
+                    <p class="sinalSwim-focus-desc" data-i18n="why3_desc">Sesuaikan jadwal sesi latihan dan pilih kolam renang terdekat yang paling nyaman untukmu.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="sinalSwim-footer" id="contact">
+        <div class="sinalSwim-footer-container">
+
+            <div class="sinalSwim-footer-brand">
+                <img src="../Assets/Photos/logoClub.jpeg" alt="Logo" class="sinalSwim-footer-logo">
+                <span class="sinalSwim-brand-title">SINALSAL SWIMMING</span>
+            </div>
+
+            <div class="sinalSwim-footer-nav">
+                <a href="../SwimmingClub/Profile/profileRenang.html">Renang</a>
+                <a href="javascript:void(0)" class="sinalSwim-coming-soon">Binsik</a>
+                <a href="javascript:void(0)" class="sinalSwim-coming-soon">Bimbel</a>
+            </div>
+
+            <div class="sinalSwim-socials">
+                <a href="https://wa.me/6281370508839" target="_blank" class="sinalSwim-social-btn sinalSwim-btn-wa">
+                    <span>☎</span> WhatsApp
+                </a>
+                <a href="https://instagram.com/sinalsal_swimming_club/" target="_blank"
+                    class="sinalSwim-social-btn sinalSwim-btn-ig">
+                    <span>🅾</span> Instagram
+                </a>
+            </div>
+
+            <p class="sinalSwim-copy" data-i18n="footer_copy">© 2026 Sinalsal Swimming & Academy. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <div class="sinalSwim-modal-backdrop" id="sinalSwimModalBackdrop">
+        <div class="sinalSwim-modal-box">
+            <div class="sinalSwim-modal-icon">🚀</div>
+            <h3 class="sinalSwim-modal-title" data-i18n="modal_title">Segera Diluncurkan!</h3>
+            <p class="sinalSwim-modal-desc" data-i18n="modal_desc">
+                Program ini akan segera diluncurkan! Untuk detail lebih lanjut hubungi kontak yang tersedia.
+            </p>
+            <div class="sinalSwim-modal-actions">
+                <a href="https://wa.me/6281370508839?text=Halo%20Coach,%20saya%20ingin%20tanya%20tentang%20program%20yang%20akan%20datang" target="_blank" class="sinalSwim-btn sinalSwim-btn-primary" data-i18n="modal_btn_wa">Hubungi WhatsApp</a>
+                <button type="button" class="sinalSwim-btn sinalSwim-btn-outline" id="sinalSwimModalCloseBtn" data-i18n="modal_btn_close">Tutup</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="navbar.js"></script>
+    <script src="landingPage.js"></script>
 </body>
+
 </html>

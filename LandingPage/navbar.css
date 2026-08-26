@@ -1,0 +1,271 @@
+:root {
+  --sinalSwim-dark-royalty: #010b6a;
+  --sinalSwim-celestial-indigo: #051e8f;
+  --sinalSwim-night-manchester: #3853b5;
+  --sinalSwim-yue-guang-blue: #213ba5;
+  --sinalSwim-indigo-light: #5473c8;
+  --sinalSwim-ice-blue: #7999dc;
+  --sinalSwim-sky-high: #a8c0eb;
+
+  /* Default Theme (Dark) */
+  --sinalSwim-bg: #03071e;
+  --sinalSwim-card-bg: rgba(5, 30, 143, 0.25);
+  --sinalSwim-card-border: rgba(121, 153, 220, 0.2);
+  --sinalSwim-nav-bg: rgba(1, 11, 106, 0.85);
+  --sinalSwim-nav-border: rgba(168, 192, 235, 0.15);
+  --sinalSwim-text-main: #f0f6fc;
+  --sinalSwim-text-muted: #a8c0eb;
+  --sinalSwim-switcher-bg: #051e8f;
+  --sinalSwim-glider-bg: #3853b5;
+  --sinalSwim-shadow: rgba(0, 0, 0, 0.35);
+  --sinalSwim-transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-theme="light"] {
+  --sinalSwim-bg: #f2f5fb;;
+  --sinalSwim-card-bg: rgba(255, 255, 255, 0.92);
+  --sinalSwim-card-border: rgba(56, 83, 181, 0.15);
+  --sinalSwim-nav-bg: #f2f5fb;
+  --sinalSwim-nav-border: rgba(5, 30, 143, 0.1);
+  --sinalSwim-text-main: #010b6a;
+  --sinalSwim-text-muted: #3853b5;
+  --sinalSwim-switcher-bg: #e2eaf8;
+  --sinalSwim-glider-bg: #051e8f;
+  --sinalSwim-shadow: rgba(5, 30, 143, 0.08);
+}
+
+.sinalSwim-navbar-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: var(--sinalSwim-nav-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--sinalSwim-nav-border);
+  transition: all var(--sinalSwim-transition);
+}
+
+.sinalSwim-navbar {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sinalSwim-nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+}
+.sinalSwim-logo-img {
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  object-fit: cover;
+  border: 1.5px solid var(--sinalSwim-ice-blue);
+  display: block;
+}
+.sinalSwim-brand-title {
+  font-size: 1.25rem;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  color: var(--sinalSwim-text-main);
+}
+
+.sinalSwim-nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  list-style: none;
+}
+.sinalSwim-nav-link {
+  position: relative;
+  text-decoration: none;
+  color: var(--sinalSwim-text-muted);
+  font-weight: 600;
+  font-size: 0.92rem;
+  padding: 0.4rem 0.2rem;
+  transition: color var(--sinalSwim-transition);
+}
+.sinalSwim-nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--sinalSwim-ice-blue);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.25s ease-in-out;
+  border-radius: 2px;
+}
+[data-theme="light"] .sinalSwim-nav-link::after {
+  background-color: var(--sinalSwim-celestial-indigo);
+}
+.sinalSwim-nav-link:hover,
+.sinalSwim-nav-link.active {
+  color: var(--sinalSwim-text-main);
+}
+.sinalSwim-nav-link:hover::after,
+.sinalSwim-nav-link.active::after {
+  transform: scaleX(1);
+}
+
+.sinalSwim-nav-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.sinalSwim-lang-switcher {
+  position: relative;
+  display: flex;
+  background-color: var(--sinalSwim-switcher-bg);
+  padding: 2px;
+  border-radius: 20px;
+  border: 1px solid var(--sinalSwim-nav-border);
+}
+.sinalSwim-lang-glider {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 32px;
+  height: 24px;
+  background-color: var(--sinalSwim-glider-bg);
+  border-radius: 14px;
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.sinalSwim-lang-switcher[data-selected="en"] .sinalSwim-lang-glider {
+  transform: translateX(32px);
+}
+.sinalSwim-lang-btn {
+  position: relative;
+  z-index: 2;
+  width: 32px;
+  height: 24px;
+  border: none;
+  background: transparent;
+  color: var(--sinalSwim-text-muted);
+  font-weight: 700;
+  font-size: 0.7rem;
+  cursor: pointer;
+}
+.sinalSwim-lang-btn.active {
+  color: #ffffff;
+}
+
+.sinalSwim-theme-toggle {
+  position: relative;
+  width: 54px;
+  height: 28px;
+  border-radius: 16px;
+  background-color: var(--sinalSwim-switcher-bg);
+  border: 1px solid var(--sinalSwim-nav-border);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 6px;
+  font-size: 0.75rem;
+}
+.sinalSwim-theme-slider {
+  position: absolute;
+  top: 2px;
+  left: 28px;
+  width: 22px;
+  height: 22px;
+  background-color: var(--sinalSwim-text-main);
+  border-radius: 50%;
+  transition: left 0.25s ease;
+}
+[data-theme="light"] .sinalSwim-theme-slider {
+  left: 2px;
+}
+
+.sinalSwim-mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--sinalSwim-text-main);
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+/* Mobile Menu */
+@media (max-width: 768px) {
+  .sinalSwim-navbar {
+    padding: 0.65rem 1rem;
+  }
+  .sinalSwim-nav-controls {
+    order: 1;
+    gap: 0.5rem;
+  }
+  .sinalSwim-lang-switcher {
+    padding: 2px;
+  }
+  .sinalSwim-lang-glider,
+  .sinalSwim-lang-btn {
+    width: 28px;
+    height: 22px;
+    font-size: 0.65rem;
+  }
+  .sinalSwim-lang-switcher[data-selected="en"] .sinalSwim-lang-glider {
+    transform: translateX(28px);
+  }
+  .sinalSwim-theme-toggle {
+    width: 48px;
+    height: 26px;
+  }
+  .sinalSwim-theme-slider {
+    width: 20px;
+    height: 20px;
+    left: 24px;
+  }
+  [data-theme="light"] .sinalSwim-theme-slider {
+    left: 2px;
+  }
+
+  .sinalSwim-nav-brand {
+    order: 2;
+    gap: 0.5rem;
+    margin-left: 0.5rem;
+    margin-right: auto;
+  }
+  .sinalSwim-logo-img {
+    width: 32px;
+    height: 32px;
+  }
+  .sinalSwim-brand-title {
+    font-size: 1.1rem;
+  }
+
+  .sinalSwim-mobile-menu-btn {
+    display: block;
+    order: 3;
+    padding: 0.2rem 0.4rem;
+  }
+
+  .sinalSwim-nav-menu {
+    order: 4;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--sinalSwim-nav-bg);
+    flex-direction: column;
+    padding: 1.2rem;
+    gap: 0.8rem;
+    border-bottom: 1px solid var(--sinalSwim-nav-border);
+    display: none;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+  .sinalSwim-nav-menu.sinalSwim-menu-open {
+    display: flex;
+  }
+}
