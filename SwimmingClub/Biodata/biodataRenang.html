@@ -1,11 +1,308 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id" data-theme="dark">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biodata Coach</title>
+    <title>Biodata Pelatih - Sinalsal Swimming Club</title>
+
+    <link rel="stylesheet" href="../../LandingPage/navbar.css">
+    <link rel="stylesheet" href="../Biodata/biodataRenang.css">
 </head>
-<body>
-    
+
+<body class="sinalSwim-body">
+
+    <header class="sinalSwim-navbar-container">
+        <nav class="sinalSwim-navbar">
+
+            <a href="../../LandingPage/landingPage.html" class="sinalSwim-nav-brand">
+                <img src="../../Assets/Photos/logoClub.jpeg" alt="Logo Sinalsal Swimming" class="sinalSwim-logo-img">
+            </a>
+
+            <button class="sinalSwim-mobile-menu-btn" id="sinalSwimMobileBtn" aria-label="Toggle Menu">☰</button>
+
+            <ul class="sinalSwim-nav-menu" id="sinalSwimNavMenu">
+                <li><a href="../../LandingPage/landingPage.html" class="sinalSwim-nav-link" data-i18n="nav_back">← Beranda</a></li>
+                <li><a href="../Profile/profileRenang.html" class="sinalSwim-nav-link active" data-i18n="nav_renang">Private Renang</a></li>
+                <li><a href="javascript:void(0)" class="sinalSwim-nav-link sinalSwim-coming-soon" data-i18n="nav_binsik">Binsik</a></li>
+                <li><a href="javascript:void(0)" class="sinalSwim-nav-link sinalSwim-coming-soon" data-i18n="nav_bimbel">Mata Pelajaran</a></li>
+            </ul>
+
+            <div class="sinalSwim-nav-controls">
+                <div class="sinalSwim-lang-switcher" id="sinalSwimLangSwitcher" data-selected="id">
+                    <div class="sinalSwim-lang-glider"></div>
+                    <button class="sinalSwim-lang-btn active" data-lang="id" type="button">IN</button>
+                    <button class="sinalSwim-lang-btn" data-lang="en" type="button">EN</button>
+                </div>
+
+                <button class="sinalSwim-theme-toggle" id="sinalSwimThemeToggle" type="button" aria-label="Toggle Theme">
+                    <span>☀️</span>
+                    <span>🌙</span>
+                    <div class="sinalSwim-theme-slider"></div>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="sinalSwim-main">
+
+        <div class="sinalSwim-global-bg-video-wrapper">
+            <video autoplay muted loop playsinline class="sinalSwim-main-bg-video">
+                <source src="../../Assets/Videos/bgVid.mp4" type="video/mp4">
+            </video>
+            <div class="sinalSwim-main-bg-overlay"></div>
+        </div>
+
+        <section class="sinalSwim-header-carousel" id="top">
+            <div class="sinalSwim-carousel-track" id="bioCarouselTrack">
+                <div class="sinalSwim-carousel-slide active">
+                    <img src="https://images.unsplash.com/photo-1530549387789-4c1017266635?w=1600&q=80" alt="Les Renang 1">
+                </div>
+                <div class="sinalSwim-carousel-slide">
+                    <img src="https://images.unsplash.com/photo-1519315901367-f34ff9154487?w=1600&q=80" alt="Les Renang 2">
+                </div>
+                <div class="sinalSwim-carousel-slide">
+                    <img src="https://images.unsplash.com/photo-1600965962102-9d260a71890d?w=1600&q=80" alt="Les Renang 3">
+                </div>
+            </div>
+
+            <div class="sinalSwim-carousel-overlay"></div>
+
+            <div class="sinalSwim-header-content">
+                <div class="sinalSwim-pill-badge" data-i18n="hero_badge">🏅 COACH PROFILE</div>
+                <h1 class="sinalSwim-header-title" data-i18n="hero_title">
+                    BIODATA INSTRUKTUR
+                </h1>
+                <p class="sinalSwim-header-subtitle" data-i18n="hero_sub">
+                    Mengenal Lebih Dekat Pelatih Profesional Sinalsal Swimming Club
+                </p>
+                <div class="sinalSwim-header-cta">
+                    <a href="../Pendaftaran/daftarRenang.html" class="sinalSwim-btn sinalSwim-btn-primary" data-i18n="btn_daftar">Daftar Sekarang →</a>
+                    <a href="#bio-details" class="sinalSwim-btn sinalSwim-btn-outline" data-i18n="btn_explore_bio">Lihat Biodata ↓</a>
+                </div>
+            </div>
+
+            <div class="sinalSwim-carousel-dots" id="bioCarouselDots"></div>
+        </section>
+
+        <div class="sinalSwim-pill-nav-section">
+            <nav class="sinalSwim-pill-nav-wrapper" aria-label="Navigasi Menu Renang">
+                <a href="../Profile/profileRenang.html" class="sinalSwim-pill-btn" data-i18n="pill_profile">Profil</a>
+                <a href="biodataRenang.html" class="sinalSwim-pill-btn active" data-i18n="pill_bio">Biodata</a>
+                <a href="../Galeri/galeriRenang.html" class="sinalSwim-pill-btn" data-i18n="pill_gallery">Galeri</a>
+                <a href="../Jadwal/jadwalRenang.html" class="sinalSwim-pill-btn" data-i18n="pill_schedule">Jadwal & Lokasi</a>
+                <a href="../Pendaftaran/daftarRenang.html" class="sinalSwim-pill-btn sinalSwim-pill-btn-cta" data-i18n="pill_register">Pendaftaran</a>
+            </nav>
+        </div>
+
+        <section class="sinalSwim-section" id="bio-details">
+            
+            <div class="sinalSwim-section-header">
+                <div class="sinalSwim-pill-badge-center">
+                    <span>📋</span> <span data-i18n="section_bio_badge">CURRICULUM VITAE</span> <span>📋</span>
+                </div>
+                <h2 class="sinalSwim-section-title" data-i18n="section_bio_title">Informasi Data Pribadi & Profesi</h2>
+                <p class="sinalSwim-section-subtitle" data-i18n="section_bio_sub">Kredensial dan rekam jejak instruktur kepelatihan renang.</p>
+            </div>
+
+            <div class="sinalSwim-bio-card-wrapper">
+                
+                <div class="sinalSwim-bio-profile-pane">
+                    <div class="sinalSwim-bio-avatar-frame">
+                        <img src="../../Assets/Photos/logoClub.jpeg" alt="Coach Dwilal L Lalalas Sayangs" class="sinalSwim-bio-avatar-img" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=600&q=80'">
+                        <div class="sinalSwim-bio-badge-overlay">
+                            <span class="sinalSwim-badge-pill">LISENSI RENANG D</span>
+                        </div>
+                    </div>
+                    <h3 class="sinalSwim-bio-coach-name">Dwilal L Lalalas Sayangs, S.Or., Gr.</h3>
+                    <p class="sinalSwim-bio-coach-title" data-i18n="coach_role_sub">Head Swimming Instructor & Coach</p>
+                    
+                    <div class="sinalSwim-bio-quick-stats">
+                        <div class="sinalSwim-stat-item">
+                            <span class="sinalSwim-stat-value">S.Or., Gr.</span>
+                            <span class="sinalSwim-stat-label" data-i18n="stat_degree">Sarjana Olahraga</span>
+                        </div>
+                        <div class="sinalSwim-stat-item">
+                            <span class="sinalSwim-stat-value">D</span>
+                            <span class="sinalSwim-stat-label" data-i18n="stat_license">Lisensi Pelatih</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sinalSwim-bio-details-pane">
+                    
+                    <div class="sinalSwim-bio-detail-row">
+                        <div class="sinalSwim-detail-icon">👤</div>
+                        <div class="sinalSwim-detail-info">
+                            <span class="sinalSwim-detail-label" data-i18n="field_name">Nama Lengkap</span>
+                            <strong class="sinalSwim-detail-value">Dwilal L Lalalas Sayangs, S.Or., Gr.</strong>
+                        </div>
+                    </div>
+
+                    <div class="sinalSwim-bio-detail-row">
+                        <div class="sinalSwim-detail-icon">🏊‍♂️</div>
+                        <div class="sinalSwim-detail-info">
+                            <span class="sinalSwim-detail-label" data-i18n="field_profession">Profesi</span>
+                            <strong class="sinalSwim-detail-value" data-i18n="val_profession">Coach / Instruktur Renang</strong>
+                        </div>
+                    </div>
+
+                    <div class="sinalSwim-bio-detail-row">
+                        <div class="sinalSwim-detail-icon">🎓</div>
+                        <div class="sinalSwim-detail-info">
+                            <span class="sinalSwim-detail-label" data-i18n="field_qualification">Kualifikasi Akademik</span>
+                            <strong class="sinalSwim-detail-value">Sarjana Olahraga (S.Or., Gr.)</strong>
+                        </div>
+                    </div>
+
+                    <div class="sinalSwim-bio-detail-row">
+                        <div class="sinalSwim-detail-icon">📜</div>
+                        <div class="sinalSwim-detail-info">
+                            <span class="sinalSwim-detail-label" data-i18n="field_license">Lisensi Resmi</span>
+                            <strong class="sinalSwim-detail-value"><span class="sinalSwim-tag-license">Lisensi Renang D</span></strong>
+                        </div>
+                    </div>
+
+                    <div class="sinalSwim-bio-detail-row">
+                        <div class="sinalSwim-detail-info-full">
+                            <div class="sinalSwim-detail-icon">🎯</div>
+                            <div class="sinalSwim-detail-info">
+                                <span class="sinalSwim-detail-label" data-i18n="field_domain">Bidang Kepelatihan</span>
+                                <strong class="sinalSwim-detail-value" data-i18n="val_domain">Pembelajaran & Pelatihan Renang (Dasar hingga Mahir)</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sinalSwim-bio-detail-row">
+                        <div class="sinalSwim-detail-icon">📚</div>
+                        <div class="sinalSwim-detail-info">
+                            <span class="sinalSwim-detail-label" data-i18n="field_program">Program Utama</span>
+                            <strong class="sinalSwim-detail-value" data-i18n="val_program">Les Renang / Privat Renang Terarah</strong>
+                        </div>
+                    </div>
+
+                    <div class="sinalSwim-bio-detail-row">
+                        <div class="sinalSwim-detail-icon">🛡️</div>
+                        <div class="sinalSwim-detail-info">
+                            <span class="sinalSwim-detail-label" data-i18n="field_club">Klub Naungan</span>
+                            <strong class="sinalSwim-detail-value">Sinalsal Swimming Club</strong>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="sinalSwim-section sinalSwim-principles-section" id="principles">
+            
+            <div class="sinalSwim-section-header">
+                <div class="sinalSwim-pill-badge-center">
+                    <span>💡</span> <span data-i18n="section_principle_badge">OUR CORE VALUES</span> <span>💡</span>
+                </div>
+                <h2 class="sinalSwim-section-title" data-i18n="section_principle_title">Prinsip Pelatihan</h2>
+                <p class="sinalSwim-section-subtitle" data-i18n="section_principle_sub">5 pondasi utama dalam setiap sesi latihan bersama Sinalsal Swimming Club.</p>
+            </div>
+
+            <div class="sinalSwim-principles-grid">
+                
+                <div class="sinalSwim-principle-card">
+                    <div class="sinalSwim-principle-icon">🦺</div>
+                    <h3 class="sinalSwim-principle-name" data-i18n="principle_1_title">Aman</h3>
+                    <p class="sinalSwim-principle-desc" data-i18n="principle_1_desc">Keselamatan dan keamanan peserta adalah prioritas utama dengan pengawasan ketat dan prosedur standar.</p>
+                </div>
+
+                <div class="sinalSwim-principle-card">
+                    <div class="sinalSwim-principle-icon">⏱️</div>
+                    <h3 class="sinalSwim-principle-name" data-i18n="principle_2_title">Disiplin</h3>
+                    <p class="sinalSwim-principle-desc" data-i18n="principle_2_desc">Membangun komitmen waktu, fokus gerakan, dan konsistensi latihan untuk hasil yang maksimal.</p>
+                </div>
+
+                <div class="sinalSwim-principle-card">
+                    <div class="sinalSwim-principle-icon">📈</div>
+                    <h3 class="sinalSwim-principle-name" data-i18n="principle_3_title">Bertahap</h3>
+                    <p class="sinalSwim-principle-desc" data-i18n="principle_3_desc">Kurikulum disusun step-by-step sesuai kurva adaptasi dan tingkat kemampuan masing-masing peserta.</p>
+                </div>
+
+                <div class="sinalSwim-principle-card">
+                    <div class="sinalSwim-principle-icon">🎓</div>
+                    <h3 class="sinalSwim-principle-name" data-i18n="principle_4_title">Profesional</h3>
+                    <p class="sinalSwim-principle-desc" data-i18n="principle_4_desc">Dipandu langsung oleh pelatih berlisensi dan berlatar belakang Sarjana Olahraga (S.Or., Gr.).</p>
+                </div>
+
+                <div class="sinalSwim-principle-card">
+                    <div class="sinalSwim-principle-icon">😊</div>
+                    <h3 class="sinalSwim-principle-name" data-i18n="principle_5_title">Menyenangkan</h3>
+                    <p class="sinalSwim-principle-desc" data-i18n="principle_5_desc">Suasana belajar yang suportif, ramah, dan bebas dari rasa tertekan agar peserta nyaman berenang.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="sinalSwim-marketing-section">
+            <div class="sinalSwim-marketing-card">
+                <img src="../../Assets/Photos/logoClub.jpeg" alt="Logo Club" class="sinalSwim-marketing-logo">
+                <span class="sinalSwim-marketing-tag" data-i18n="mkt_tag">YUK, BELAJAR RENANG BERSAMA!</span>
+                <h2 class="sinalSwim-marketing-title">SINALSAL SWIMMING CLUB</h2>
+                <div class="sinalSwim-marketing-quote">
+                    <p data-i18n="mkt_quote">“Belajar dengan Aman, Berlatih dengan Disiplin, Berenang dengan Percaya Diri.”</p>
+                    <span class="sinalSwim-marketing-author">— Coach Dwilal L Lalalas Sayangs, S.Or., Gr.</span>
+                </div>
+                <div class="sinalSwim-marketing-cta">
+                    <a href="../Pendaftaran/daftarRenang.html" class="sinalSwim-btn sinalSwim-btn-primary" data-i18n="mkt_btn">Daftar Sekarang →</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="sinalSwim-footer" id="contact">
+        <div class="sinalSwim-footer-container">
+
+            <div class="sinalSwim-footer-brand">
+                <img src="../../Assets/Photos/logoClub.jpeg" alt="Logo" class="sinalSwim-footer-logo">
+                <span class="sinalSwim-brand-title">SINALSAL SWIMMING CLUB</span>
+            </div>
+
+            <div class="sinalSwim-footer-nav">
+                <a href="../../LandingPage/landingPage.html" data-i18n="nav_home">Beranda</a>
+                <a href="../Profile/profileRenang.html" data-i18n="pill_profile">Profil</a>
+                <a href="../Biodata/biodataRenang.html" data-i18n="pill_bio">Biodata</a>
+                <a href="../Jadwal/jadwalRenang.html" data-i18n="pill_schedule">Jadwal & Lokasi</a>
+                <a href="../Pendaftaran/daftarRenang.html" data-i18n="pill_register">Pendaftaran</a>
+            </div>
+
+            <div class="sinalSwim-socials">
+                <a href="https://wa.me/" target="_blank" class="sinalSwim-social-btn sinalSwim-btn-wa">
+                    <span>☎</span> WhatsApp
+                </a>
+                <a href="https://instagram.com/sinalsal_swimming_club/" target="_blank" class="sinalSwim-social-btn sinalSwim-btn-ig">
+                    <span>🅾</span> Instagram
+                </a>
+            </div>
+
+            <p class="sinalSwim-copy" data-i18n="footer_copy">© 2026 Sinalsal Swimming & Academy. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <div class="sinalSwim-modal-backdrop" id="sinalSwimModalBackdrop">
+        <div class="sinalSwim-modal-box">
+            <div class="sinalSwim-modal-icon">🚀</div>
+            <h3 class="sinalSwim-modal-title" data-i18n="modal_title">Segera Diluncurkan!</h3>
+            <p class="sinalSwim-modal-desc" data-i18n="modal_desc">
+                Program ini akan segera diluncurkan! Untuk detail lebih lanjut hubungi kontak yang tersedia.
+            </p>
+            <div class="sinalSwim-modal-actions">
+                <a href="https://wa.me/?text=Halo%20Coach,%20saya%20ingin%20tanya%20tentang%20program%20yang%20akan%20datang" target="_blank" class="sinalSwim-btn sinalSwim-btn-primary" data-i18n="modal_btn_wa">Hubungi WhatsApp</a>
+                <button type="button" class="sinalSwim-btn sinalSwim-btn-outline" id="sinalSwimModalCloseBtn" data-i18n="modal_btn_close">Tutup</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../LandingPage/navbar.js"></script>
+    <script src="../Biodata/biodataRenang.js"></script>
 </body>
+
 </html>

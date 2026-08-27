@@ -50,7 +50,7 @@ const sinalSwimI18n = {
     why3_title: "Waktu & Lokasi Fleksibel",
     why3_desc: "Sesuaikan jadwal sesi latihan dan pilih kolam renang terdekat yang paling nyaman untukmu.",
 
-    footer_copy: "© 2026 Sinalsal Swimming & Academy. All Rights Reserved.",
+    footer_copy: "© 2026 Sinalsal Swimming. All Rights Reserved.",
 
     modal_title: "Segera Diluncurkan!",
     modal_desc: "Program ini akan segera diluncurkan! Untuk detail lebih lanjut hubungi kontak yang tersedia.",
@@ -107,7 +107,7 @@ const sinalSwimI18n = {
     why3_title: "Flexible Time & Venue",
     why3_desc: "Set your own training hours and pick the nearest partner pool convenient for you.",
 
-    footer_copy: "© 2026 Sinalsal Swimming & Academy. All Rights Reserved.",
+    footer_copy: "© 2026 Sinalsal Swimming. All Rights Reserved.",
 
     modal_title: "Coming Soon!",
     modal_desc: "This program will be launched soon! For more details, please reach out via our contact channels.",
