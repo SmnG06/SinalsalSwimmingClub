@@ -1,32 +1,23 @@
-/**
- * Sinalsal Swimming - Biodata Renang Controller
- * Updated with Bilingual Translation, Carousel, and Modal Alert
- */
-
 const biodataRenangI18n = {
   id: {
-    // Nav
     nav_back: "← Beranda",
     nav_home: "Beranda",
     nav_renang: "Private Renang",
     nav_binsik: "Binsik",
     nav_bimbel: "Mata Pelajaran",
 
-    // Pill Navigation
     pill_profile: "Profil",
     pill_bio: "Biodata",
     pill_gallery: "Galeri",
     pill_schedule: "Jadwal & Lokasi",
     pill_register: "Pendaftaran",
 
-    // Hero Header
     hero_badge: "🏅 COACH PROFILE",
     hero_title: "BIODATA INSTRUKTUR",
     hero_sub: "Mengenal Lebih Dekat Pelatih Profesional Sinalsal Swimming Club",
     btn_daftar: "Daftar Sekarang →",
     btn_explore_bio: "Lihat Biodata ↓",
 
-    // Biodata Section
     section_bio_badge: "CURRICULUM VITAE",
     section_bio_title: "Informasi Data Pribadi & Profesi",
     section_bio_sub: "Kredensial dan rekam jejak instruktur kepelatihan renang.",
@@ -34,7 +25,6 @@ const biodataRenangI18n = {
     stat_degree: "Sarjana Olahraga",
     stat_license: "Lisensi Pelatih",
 
-    // Fields
     field_name: "Nama Lengkap",
     field_profession: "Profesi",
     val_profession: "Coach/Instruktur Renang",
@@ -46,7 +36,6 @@ const biodataRenangI18n = {
     val_program: "Les Renang/Privat Renang Terarah",
     field_club: "Klub Naungan",
 
-    // 5 Principles Section
     section_principle_badge: "OUR CORE VALUES",
     section_principle_title: "Prinsip Pelatihan",
     section_principle_sub: "5 pondasi utama dalam setiap sesi latihan bersama Sinalsal Swimming Club.",
@@ -61,43 +50,36 @@ const biodataRenangI18n = {
     principle_5_title: "Menyenangkan",
     principle_5_desc: "Suasana belajar yang suportif, ramah, dan bebas dari rasa tertekan agar peserta nyaman berenang.",
 
-    // Marketing Card
     mkt_tag: "YUK, BELAJAR RENANG BERSAMA!",
     mkt_quote: "“Belajar dengan Aman, Berlatih dengan Disiplin, Berenang dengan Percaya Diri.”",
     mkt_btn: "Daftar Sekarang →",
 
-    // Footer
     footer_copy: "© 2026 Sinalsal Swimming & Academy. All Rights Reserved.",
 
-    // Modal
     modal_title: "Segera Diluncurkan!",
     modal_desc: "Program ini akan segera diluncurkan! Untuk detail lebih lanjut hubungi kontak yang tersedia.",
     modal_btn_wa: "Hubungi WhatsApp",
     modal_btn_close: "Tutup"
   },
   en: {
-    // Nav
     nav_back: "← Home",
     nav_home: "Home",
     nav_renang: "Private Swimming",
     nav_binsik: "Fitness (Binsik)",
     nav_bimbel: "Academic Tutoring",
 
-    // Pill Navigation
     pill_profile: "Profile",
     pill_bio: "Bio",
     pill_gallery: "Gallery",
     pill_schedule: "Schedule & Pool",
     pill_register: "Registration",
 
-    // Hero Header
     hero_badge: "🏅 COACH PROFILE",
     hero_title: "INSTRUCTOR BIODATA",
     hero_sub: "Get to Know the Professional Coach of Sinalsal Swimming Club",
     btn_daftar: "Register Now →",
     btn_explore_bio: "View Bio Details ↓",
 
-    // Biodata Section
     section_bio_badge: "CURRICULUM VITAE",
     section_bio_title: "Personal & Professional Credentials",
     section_bio_sub: "Certified qualifications and swimming coaching track record.",
@@ -105,7 +87,6 @@ const biodataRenangI18n = {
     stat_degree: "Bachelor of Sports",
     stat_license: "Coach License",
 
-    // Fields
     field_name: "Full Name",
     field_profession: "Profession",
     val_profession: "Swimming Coach/Certified Instructor",
@@ -117,7 +98,6 @@ const biodataRenangI18n = {
     val_program: "Private/Semi-Private Swimming Lessons",
     field_club: "Affiliated Club",
 
-    // 5 Principles Section
     section_principle_badge: "OUR CORE VALUES",
     section_principle_title: "Coaching Principles",
     section_principle_sub: "5 core foundations embedded in every Sinalsal Swimming Club session.",
@@ -132,15 +112,12 @@ const biodataRenangI18n = {
     principle_5_title: "Enjoyable",
     principle_5_desc: "A supportive, friendly, and stress-free environment encouraging confident swimming.",
 
-    // Marketing Card
     mkt_tag: "COME LEARN SWIMMING WITH US!",
     mkt_quote: "“Learn Safely, Train with Discipline, Swim with Confidence.”",
     mkt_btn: "Register Now →",
 
-    // Footer
     footer_copy: "© 2026 Sinalsal Swimming & Academy. All Rights Reserved.",
 
-    // Modal
     modal_title: "Coming Soon!",
     modal_desc: "This program will be launched soon! For more details, please reach out via our contact channels.",
     modal_btn_wa: "Contact WhatsApp",
@@ -149,9 +126,6 @@ const biodataRenangI18n = {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
-  // ==========================================
-  // 1. FAST TRANSLATION
-  // ==========================================
   const langSwitcher = document.getElementById('sinalSwimLangSwitcher');
   const langBtns = document.querySelectorAll('.sinalSwim-lang-btn');
 
@@ -183,9 +157,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // ==========================================
-  // 2. HEADER CAROUSEL ENGINE
-  // ==========================================
   const slides = document.querySelectorAll('.sinalSwim-carousel-slide');
   const dotsContainer = document.getElementById('bioCarouselDots');
   let currentSlide = 0;
@@ -232,9 +203,6 @@ document.addEventListener('DOMContentLoaded', () => {
     startAutoplay();
   }
 
-  // ==========================================
-  // 3. COMING SOON MODAL
-  // ==========================================
   const modalBackdrop = document.getElementById('sinalSwimModalBackdrop');
   const modalCloseBtn = document.getElementById('sinalSwimModalCloseBtn');
   const comingSoonElements = document.querySelectorAll('.sinalSwim-coming-soon');

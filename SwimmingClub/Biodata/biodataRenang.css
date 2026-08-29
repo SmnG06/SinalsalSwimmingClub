@@ -1,7 +1,3 @@
-/* ==========================================================================
-   SINALSAL SWIMMING - BIODATA PELATIH PAGE STYLING
-   ========================================================================== */
-
 * {
   margin: 0;
   padding: 0;
@@ -10,9 +6,8 @@
   scroll-behavior: smooth;
 }
 
-/* --- THEME PALETTES --- */
+
 :root {
-  /* Dark Mode */
   --sinalSwim-bg: #03071e;
   --sinalSwim-card-bg: rgba(5, 30, 143, 0.35);
   --sinalSwim-card-border: rgba(121, 153, 220, 0.25);
@@ -25,7 +20,6 @@
 }
 
 [data-theme="light"] {
-  /* Light Mode */
   --sinalSwim-bg: #dbeafe;
   --sinalSwim-card-bg: rgba(255, 255, 255, 0.88);
   --sinalSwim-card-border: rgba(33, 59, 165, 0.18);
@@ -52,7 +46,6 @@ body.sinalSwim-body {
   width: 100%;
 }
 
-/* Atmospheric Background Video */
 .sinalSwim-global-bg-video-wrapper {
   position: fixed;
   top: 0;
@@ -89,7 +82,7 @@ body.sinalSwim-body {
   background: radial-gradient(circle at 50% 40%, rgba(219, 234, 254, 0.4) 0%, var(--sinalSwim-bg) 95%);
 }
 
-/* ==================== HEADER CAROUSEL ==================== */
+/* Header */
 .sinalSwim-header-carousel {
   position: relative;
   width: 100%;
@@ -228,7 +221,7 @@ body.sinalSwim-body {
   background: var(--sinalSwim-accent-glow);
 }
 
-/* ==================== FLOATING PILLS NAVIGATION (DI BAWAH HEADER) ==================== */
+/* Main */
 .sinalSwim-pill-nav-section {
   position: relative;
   z-index: 10;
@@ -301,7 +294,6 @@ body.sinalSwim-body {
 }
 
 
-/* ==================== BUTTONS ==================== */
 .sinalSwim-btn {
   display: inline-flex;
   align-items: center;
@@ -340,7 +332,6 @@ body.sinalSwim-body {
   border-color: var(--sinalSwim-accent-glow);
 }
 
-/* ==================== SECTIONS COMMON ==================== */
 .sinalSwim-section {
   position: relative;
   z-index: 2;
@@ -388,7 +379,6 @@ body.sinalSwim-body {
   margin-top: 0.4rem;
 }
 
-/* ==================== BIODATA CARD WRAPPER ==================== */
 .sinalSwim-bio-card-wrapper {
   background: var(--sinalSwim-card-bg);
   backdrop-filter: blur(16px);
@@ -403,7 +393,6 @@ body.sinalSwim-body {
   align-items: center;
 }
 
-/* Kolom Kiri: Profile Avatar Card */
 .sinalSwim-bio-profile-pane {
   display: flex;
   flex-direction: column;
@@ -506,7 +495,6 @@ body.sinalSwim-body {
   color: var(--sinalSwim-text-muted);
 }
 
-/* Kolom Kanan: Detail Information */
 .sinalSwim-bio-details-pane {
   display: flex;
   flex-direction: column;
@@ -576,7 +564,6 @@ body.sinalSwim-body {
   font-weight: 800;
 }
 
-/* ==================== 5 PRINSIP PELATIHAN ==================== */
 .sinalSwim-principles-section {
   padding-top: 1rem;
 }
@@ -625,7 +612,6 @@ body.sinalSwim-body {
   color: var(--sinalSwim-text-muted);
 }
 
-/* ==================== MARKETING / MOTIVATION BANNER ==================== */
 .sinalSwim-marketing-section {
   position: relative;
   z-index: 2;
@@ -811,7 +797,6 @@ body.sinalSwim-body {
   text-align: center;
 }
 
-/* ==================== MODAL POPUP ==================== */
 .sinalSwim-modal-backdrop {
   position: fixed;
   top: 0;
@@ -881,7 +866,7 @@ body.sinalSwim-body {
   gap: 0.8rem;
 }
 
-/* ==================== RESPONSIVE ==================== */
+/* Responsive Layout */
 @media (max-width: 992px) {
   .sinalSwim-bio-card-wrapper {
     grid-template-columns: 1fr;
