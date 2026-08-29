@@ -8,7 +8,6 @@ const biodataRenangI18n = {
 
     pill_profile: "Profil",
     pill_bio: "Biodata",
-    pill_gallery: "Galeri",
     pill_schedule: "Jadwal & Lokasi",
     pill_register: "Pendaftaran",
 
@@ -70,7 +69,6 @@ const biodataRenangI18n = {
 
     pill_profile: "Profile",
     pill_bio: "Bio",
-    pill_gallery: "Gallery",
     pill_schedule: "Schedule & Pool",
     pill_register: "Registration",
 
