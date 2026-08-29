@@ -53,7 +53,7 @@ const biodataRenangI18n = {
     mkt_quote: "“Belajar dengan Aman, Berlatih dengan Disiplin, Berenang dengan Percaya Diri.”",
     mkt_btn: "Daftar Sekarang →",
 
-    footer_copy: "© 2026 Sinalsal Swimming & Academy. All Rights Reserved.",
+    footer_copy: "© 2026 Sinalsal Swimming. All Rights Reserved.",
 
     modal_title: "Segera Diluncurkan!",
     modal_desc: "Program ini akan segera diluncurkan! Untuk detail lebih lanjut hubungi kontak yang tersedia.",
@@ -114,7 +114,7 @@ const biodataRenangI18n = {
     mkt_quote: "“Learn Safely, Train with Discipline, Swim with Confidence.”",
     mkt_btn: "Register Now →",
 
-    footer_copy: "© 2026 Sinalsal Swimming & Academy. All Rights Reserved.",
+    footer_copy: "© 2026 Sinalsal Swimming. All Rights Reserved.",
 
     modal_title: "Coming Soon!",
     modal_desc: "This program will be launched soon! For more details, please reach out via our contact channels.",

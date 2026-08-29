@@ -1,11 +1,278 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id" data-theme="dark">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jadwal Renang</title>
+    <title>Jadwal & Lokasi Latihan - Sinalsal Swimming Club</title>
+
+    <link rel="stylesheet" href="../../LandingPage/navbar.css">
+    <link rel="stylesheet" href="../Jadwal/jadwalRenang.css">
 </head>
-<body>
-    
+
+<body class="sinalSwim-body">
+
+    <header class="sinalSwim-navbar-container">
+        <nav class="sinalSwim-navbar">
+            <a href="../../LandingPage/landingPage.html" class="sinalSwim-nav-brand">
+                <img src="../../Assets/Photos/logoClub.jpeg" alt="Logo Sinalsal Swimming" class="sinalSwim-logo-img">
+            </a>
+
+            <button class="sinalSwim-mobile-menu-btn" id="sinalSwimMobileBtn" aria-label="Toggle Menu">☰</button>
+
+            <ul class="sinalSwim-nav-menu" id="sinalSwimNavMenu">
+                <li><a href="../../LandingPage/landingPage.html" class="sinalSwim-nav-link" data-i18n="nav_back">← Beranda</a></li>
+                <li><a href="../Profile/profileRenang.html" class="sinalSwim-nav-link active" data-i18n="nav_renang">Private Renang</a></li>
+                <li><a href="javascript:void(0)" class="sinalSwim-nav-link sinalSwim-coming-soon" data-i18n="nav_binsik">Binsik</a></li>
+                <li><a href="javascript:void(0)" class="sinalSwim-nav-link sinalSwim-coming-soon" data-i18n="nav_bimbel">Mata Pelajaran</a></li>
+            </ul>
+
+            <div class="sinalSwim-nav-controls">
+                <div class="sinalSwim-lang-switcher" id="sinalSwimLangSwitcher" data-selected="id">
+                    <div class="sinalSwim-lang-glider"></div>
+                    <button class="sinalSwim-lang-btn active" data-lang="id" type="button">IN</button>
+                    <button class="sinalSwim-lang-btn" data-lang="en" type="button">EN</button>
+                </div>
+
+                <button class="sinalSwim-theme-toggle" id="sinalSwimThemeToggle" type="button" aria-label="Toggle Theme">
+                    <span>☀️</span>
+                    <span>🌙</span>
+                    <div class="sinalSwim-theme-slider"></div>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="sinalSwim-main">
+
+        <div class="sinalSwim-global-bg-video-wrapper">
+            <video autoplay muted loop playsinline class="sinalSwim-main-bg-video">
+                <source src="../../Assets/Videos/bgVid.mp4" type="video/mp4">
+            </video>
+            <div class="sinalSwim-main-bg-overlay"></div>
+        </div>
+
+        <section class="sinalSwim-header-carousel" id="top">
+            <div class="sinalSwim-carousel-track" id="scheduleCarouselTrack">
+                <div class="sinalSwim-carousel-slide active">
+                    <img src="https://images.unsplash.com/photo-1530549387789-4c1017266635?w=1600&q=80" alt="Jadwal Renang 1">
+                </div>
+                <div class="sinalSwim-carousel-slide">
+                    <img src="https://images.unsplash.com/photo-1519315901367-f34ff9154487?w=1600&q=80" alt="Jadwal Renang 2">
+                </div>
+                <div class="sinalSwim-carousel-slide">
+                    <img src="https://images.unsplash.com/photo-1600965962102-9d260a71890d?w=1600&q=80" alt="Jadwal Renang 3">
+                </div>
+            </div>
+
+            <div class="sinalSwim-carousel-overlay"></div>
+
+            <div class="sinalSwim-header-content">
+                <div class="sinalSwim-pill-badge" data-i18n="hero_badge">📍 SCHEDULE & VENUE</div>
+                <h1 class="sinalSwim-header-title" data-i18n="hero_title">
+                    JADWAL & LOKASI LATIHAN
+                </h1>
+                <p class="sinalSwim-header-subtitle" data-i18n="hero_sub">
+                    Informasi jadwal sesi latihan renang rutin dan lokasi kolam resmi.
+                </p>
+                <div class="sinalSwim-header-cta">
+                    <a href="../Pendaftaran/daftarRenang.html" class="sinalSwim-btn sinalSwim-btn-primary" data-i18n="btn_daftar">Daftar Sekarang →</a>
+                    <a href="#schedule-table" class="sinalSwim-btn sinalSwim-btn-outline" data-i18n="btn_explore_schedule">Lihat Jadwal ↓</a>
+                </div>
+            </div>
+
+            <div class="sinalSwim-carousel-dots" id="scheduleCarouselDots"></div>
+        </section>
+
+        <div class="sinalSwim-pill-nav-section">
+            <nav class="sinalSwim-pill-nav-wrapper" aria-label="Navigasi Menu Renang">
+                <a href="../Profile/profileRenang.html" class="sinalSwim-pill-btn" data-i18n="pill_profile">Profil</a>
+                <a href="../Biodata/biodataRenang.html" class="sinalSwim-pill-btn" data-i18n="pill_bio">Biodata</a>
+                <a href="../Jadwal/jadwalRenang.html" class="sinalSwim-pill-btn active" data-i18n="pill_schedule">Jadwal & Lokasi</a>
+                <a href="../Pendaftaran/daftarRenang.html" class="sinalSwim-pill-btn" data-i18n="pill_register">Pendaftaran</a>
+            </nav>
+        </div>
+
+        <section class="sinalSwim-section" id="schedule-table">
+
+            <div class="sinalSwim-section-header">
+                <div class="sinalSwim-pill-badge-center">
+                    <span>📅</span> <span data-i18n="section_sched_badge">SENIN - JUMAT</span> <span>📅</span>
+                </div>
+                <h2 class="sinalSwim-section-title" data-i18n="sch_table_title">Tabel Jadwal Les Renang</h2>
+                <p class="sinalSwim-section-subtitle" data-i18n="sch_table_sub">Peserta dapat memilih jadwal latihan sesuai ketersediaan slot yang ada.</p>
+            </div>
+
+            <div class="sinalSwim-table-container">
+                <table class="sinalSwim-schedule-table">
+                    <thead>
+                        <tr>
+                            <th data-i18n="th_day">Hari</th>
+                            <th data-i18n="th_session_1">Sesi I (15.00 - 16.30 WIB)</th>
+                            <th data-i18n="th_session_2">Sesi II (16.30 - 18.00 WIB)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="sinalSwim-day-cell"><strong>Senin</strong></td>
+                            <td><span class="sinalSwim-time-pill">15.00 - 16.30 WIB</span></td>
+                            <td><span class="sinalSwim-time-pill">16.30 - 18.00 WIB</span></td>
+                        </tr>
+                        <tr>
+                            <td class="sinalSwim-day-cell"><strong>Selasa</strong></td>
+                            <td><span class="sinalSwim-time-pill">15.00 - 16.30 WIB</span></td>
+                            <td><span class="sinalSwim-time-pill">16.30 - 18.00 WIB</span></td>
+                        </tr>
+                        <tr>
+                            <td class="sinalSwim-day-cell"><strong>Rabu</strong></td>
+                            <td><span class="sinalSwim-time-pill">15.00 - 16.30 WIB</span></td>
+                            <td><span class="sinalSwim-time-pill">16.30 - 18.00 WIB</span></td>
+                        </tr>
+                        <tr>
+                            <td class="sinalSwim-day-cell"><strong>Kamis</strong></td>
+                            <td><span class="sinalSwim-time-pill">15.00 - 16.30 WIB</span></td>
+                            <td><span class="sinalSwim-time-pill">16.30 - 18.00 WIB</span></td>
+                        </tr>
+                        <tr>
+                            <td class="sinalSwim-day-cell"><strong>Jumat</strong></td>
+                            <td><span class="sinalSwim-time-pill">15.00 - 16.30 WIB</span></td>
+                            <td><span class="sinalSwim-time-pill">16.30 - 18.00 WIB</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="sinalSwim-session-cards-grid">
+                <div class="sinalSwim-session-card">
+                    <div class="sinalSwim-session-icon">⏰</div>
+                    <div class="sinalSwim-session-badge">SESI I</div>
+                    <div class="sinalSwim-session-time">15.00 - 16.30 WIB</div>
+                    <p data-i18n="session_1_desc">Sesi sore awal, sangat baik untuk latihan fokus dengan sinar matahari sore yang bersahabat.</p>
+                </div>
+
+                <div class="sinalSwim-session-card">
+                    <div class="sinalSwim-session-icon">🌅</div>
+                    <div class="sinalSwim-session-badge">SESI II</div>
+                    <div class="sinalSwim-session-time">16.30 - 18.00 WIB</div>
+                    <p data-i18n="session_2_desc">Sesi sore lanjutan selepas waktu sekolah atau jam aktivitas harian, suasana lebih sejuk.</p>
+                </div>
+            </div>
+
+            <div class="sinalSwim-section-header" style="margin-top: 4.5rem;">
+                <div class="sinalSwim-pill-badge-center">
+                    <span>🏊‍♂️</span> <span data-i18n="section_loc_badge">VENUE & LOCATION</span> <span>🏊‍♂️</span>
+                </div>
+                <h2 class="sinalSwim-section-title" data-i18n="loc_title">Lokasi Latihan</h2>
+                <p class="sinalSwim-section-subtitle" data-i18n="loc_sub">Pusat pelatihan resmi dan layanan konsultasi lokasi latihan khusus.</p>
+            </div>
+
+            <div class="sinalSwim-location-dual-grid">
+                
+                <div class="sinalSwim-location-main-card">
+                    <div class="sinalSwim-loc-header-badge">
+                        <span>⭐ LOKASI UTAMA RESMI</span>
+                    </div>
+                    <div class="sinalSwim-loc-body">
+                        <div class="sinalSwim-loc-icon-large">🏨</div>
+                        <h3 class="sinalSwim-loc-hotel-title" data-i18n="loc_main_name">Kolam Berenang Prima Jaya Hotel</h3>
+                        <p class="sinalSwim-loc-hotel-sub" data-i18n="loc_main_sub">Pasar 1, Perdagangan</p>
+                        
+                        <div class="sinalSwim-loc-desc-box">
+                            <p data-i18n="loc_main_desc">
+                                Tempat latihan resmi Sinalsal Swimming Club dengan kondisi kolam renang yang bersih, aman, dan nyaman untuk semua tingkatan usia.
+                            </p>
+                        </div>
+
+                        <div class="sinalSwim-loc-actions">
+                            <a href="https://maps.app.goo.gl/dXK1GudiDi7C3T277" target="_blank" rel="noopener noreferrer" class="sinalSwim-btn sinalSwim-btn-primary sinalSwim-btn-maps">
+                                <span>🗺️</span> <span data-i18n="btn_open_maps">Buka Google Maps</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sinalSwim-location-request-card">
+                    <div class="sinalSwim-loc-header-badge sinalSwim-badge-request">
+                        <span>💬 REQUEST TEMPAT LATIHAN</span>
+                    </div>
+                    <div class="sinalSwim-loc-body">
+                        <div class="sinalSwim-loc-icon-large">📍</div>
+                        <h3 class="sinalSwim-loc-hotel-title" data-i18n="req_title">Punya Rekomendasi Tempat Lain?</h3>
+                        <p class="sinalSwim-loc-hotel-sub" data-i18n="req_sub">Konsultasi Lokasi Kolam Pilihan Anda</p>
+                        
+                        <div class="sinalSwim-loc-desc-box">
+                            <p data-i18n="req_desc">
+                                Diskusikan dengan Coach mengenai tempat latihan yang Anda inginkan sebagai bahan pertimbangan dan kesepakatan bersama.
+                            </p>
+                        </div>
+
+                        <div class="sinalSwim-loc-actions">
+                            <a href="https://wa.me/6281370508839?text=Halo%20Coach,%20saya%20ingin%20berdiskusi%20mengenai%20tempat%20latihan%20renang" target="_blank" class="sinalSwim-btn sinalSwim-btn-outline sinalSwim-btn-wa">
+                                <span>💬</span> <span data-i18n="btn_req_wa">Diskusikan dengan Coach</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="sinalSwim-cta-banner">
+                <div class="sinalSwim-cta-content">
+                    <h3 data-i18n="banner_title">Sudah Menentukan Hari & Sesi Latihan?</h3>
+                    <p data-i18n="banner_sub">Slot latihan terbatas di setiap sesinya. Daftarkan diri Anda sekarang sebelum kuota penuh.</p>
+                </div>
+                <a href="../Pendaftaran/daftarRenang.html" class="sinalSwim-btn sinalSwim-btn-primary sinalSwim-cta-btn" data-i18n="btn_daftar_now">Daftar Sekarang →</a>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="sinalSwim-footer" id="contact">
+        <div class="sinalSwim-footer-container">
+
+            <div class="sinalSwim-footer-brand">
+                <img src="../../Assets/Photos/logoClub.jpeg" alt="Logo" class="sinalSwim-footer-logo">
+                <span class="sinalSwim-brand-title">SINALSAL SWIMMING CLUB</span>
+            </div>
+
+            <div class="sinalSwim-footer-nav">
+                <a href="../../LandingPage/landingPage.html" data-i18n="nav_home">Beranda</a>
+                <a href="../Profile/profileRenang.html" data-i18n="pill_profile">Profil</a>
+                <a href="../Biodata/biodataRenang.html" data-i18n="pill_bio">Biodata</a>
+                <a href="../Jadwal/jadwalRenang.html" data-i18n="pill_schedule">Jadwal & Lokasi</a>
+                <a href="../Pendaftaran/daftarRenang.html" data-i18n="pill_register">Pendaftaran</a>
+            </div>
+
+            <div class="sinalSwim-socials">
+                <a href="https://wa.me/6281370508839" target="_blank" class="sinalSwim-social-btn sinalSwim-btn-wa">
+                    <span>☎</span> WhatsApp
+                </a>
+                <a href="https://instagram.com/sinalsal_swimming_club/" target="_blank" class="sinalSwim-social-btn sinalSwim-btn-ig">
+                    <span>🅾</span> Instagram
+                </a>
+            </div>
+
+            <p class="sinalSwim-copy" data-i18n="footer_copy">© 2026 Sinalsal Swimming. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <div class="sinalSwim-modal-backdrop" id="sinalSwimModalBackdrop">
+        <div class="sinalSwim-modal-box">
+            <div class="sinalSwim-modal-icon">🚀</div>
+            <h3 class="sinalSwim-modal-title" data-i18n="modal_title">Segera Diluncurkan!</h3>
+            <p class="sinalSwim-modal-desc" data-i18n="modal_desc">
+                Program ini akan segera diluncurkan! Untuk detail lebih lanjut hubungi kontak yang tersedia.
+            </p>
+            <div class="sinalSwim-modal-actions">
+                <a href="https://wa.me/6281370508839?text=Halo%20Coach,%20saya%20ingin%20tanya%20tentang%20program%20yang%20akan%20datang" target="_blank" class="sinalSwim-btn sinalSwim-btn-primary" data-i18n="modal_btn_wa">Hubungi WhatsApp</a>
+                <button type="button" class="sinalSwim-btn sinalSwim-btn-outline" id="sinalSwimModalCloseBtn" data-i18n="modal_btn_close">Tutup</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../LandingPage/navbar.js"></script>
+    <script src="../Jadwal/jadwalRenang.js"></script>
 </body>
+
 </html>
