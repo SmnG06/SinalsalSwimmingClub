@@ -37,13 +37,13 @@ const biodataRenangI18n = {
     // Fields
     field_name: "Nama Lengkap",
     field_profession: "Profesi",
-    val_profession: "Coach / Instruktur Renang",
+    val_profession: "Coach/Instruktur Renang",
     field_qualification: "Kualifikasi Akademik",
     field_license: "Lisensi Resmi",
     field_domain: "Bidang Kepelatihan",
     val_domain: "Pembelajaran & Pelatihan Renang (Dasar hingga Mahir)",
     field_program: "Program Utama",
-    val_program: "Les Renang / Privat Renang Terarah",
+    val_program: "Les Renang/Privat Renang Terarah",
     field_club: "Klub Naungan",
 
     // 5 Principles Section
@@ -108,13 +108,13 @@ const biodataRenangI18n = {
     // Fields
     field_name: "Full Name",
     field_profession: "Profession",
-    val_profession: "Swimming Coach / Certified Instructor",
+    val_profession: "Swimming Coach/Certified Instructor",
     field_qualification: "Academic Qualification",
     field_license: "Official License",
     field_domain: "Coaching Field",
     val_domain: "Swimming Pedagogy & Training (Basic to Advanced)",
     field_program: "Core Program",
-    val_program: "Private / Semi-Private Swimming Lessons",
+    val_program: "Private/Semi-Private Swimming Lessons",
     field_club: "Affiliated Club",
 
     // 5 Principles Section
