@@ -1,11 +1,394 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id" data-theme="dark">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pendaftaran Renang</title>
+    <title>Pendaftaran Les Renang - Sinalsal Swimming Club</title>
+
+    <link rel="stylesheet" href="../../LandingPage/navbar.css">
+    <link rel="stylesheet" href="../Pendaftaran/daftarRenang.css">
 </head>
-<body>
-    
+
+<body class="sinalSwim-body">
+
+    <header class="sinalSwim-navbar-container">
+        <nav class="sinalSwim-navbar">
+            <a href="../../LandingPage/landingPage.html" class="sinalSwim-nav-brand">
+                <img src="../../Assets/Photos/logoClub.jpeg" alt="Logo Sinalsal Swimming" class="sinalSwim-logo-img">
+            </a>
+
+            <button class="sinalSwim-mobile-menu-btn" id="sinalSwimMobileBtn" aria-label="Toggle Menu">☰</button>
+
+            <ul class="sinalSwim-nav-menu" id="sinalSwimNavMenu">
+                <li><a href="../../LandingPage/landingPage.html" class="sinalSwim-nav-link" data-i18n="nav_back">←
+                        Beranda</a></li>
+                <li><a href="../Profile/profileRenang.html" class="sinalSwim-nav-link active"
+                        data-i18n="nav_renang">Private Renang</a></li>
+                <li><a href="javascript:void(0)" class="sinalSwim-nav-link sinalSwim-coming-soon"
+                        data-i18n="nav_binsik">Binsik</a></li>
+                <li><a href="javascript:void(0)" class="sinalSwim-nav-link sinalSwim-coming-soon"
+                        data-i18n="nav_bimbel">Mata Pelajaran</a></li>
+            </ul>
+
+            <div class="sinalSwim-nav-controls">
+                <div class="sinalSwim-lang-switcher" id="sinalSwimLangSwitcher" data-selected="id">
+                    <div class="sinalSwim-lang-glider"></div>
+                    <button class="sinalSwim-lang-btn active" data-lang="id" type="button">IN</button>
+                    <button class="sinalSwim-lang-btn" data-lang="en" type="button">EN</button>
+                </div>
+
+                <button class="sinalSwim-theme-toggle" id="sinalSwimThemeToggle" type="button"
+                    aria-label="Toggle Theme">
+                    <span>☀️</span>
+                    <span>🌙</span>
+                    <div class="sinalSwim-theme-slider"></div>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="sinalSwim-main">
+
+        <div class="sinalSwim-global-bg-video-wrapper">
+            <video autoplay muted loop playsinline class="sinalSwim-main-bg-video">
+                <source src="../../Assets/Videos/bgVid.mp4" type="video/mp4">
+            </video>
+            <div class="sinalSwim-main-bg-overlay"></div>
+        </div>
+
+        <section class="sinalSwim-header-carousel" id="top">
+            <div class="sinalSwim-carousel-track" id="regCarouselTrack">
+                <div class="sinalSwim-carousel-slide active">
+                    <img src="https://images.unsplash.com/photo-1530549387789-4c1017266635?w=1600&q=80"
+                        alt="Pendaftaran Renang 1">
+                </div>
+                <div class="sinalSwim-carousel-slide">
+                    <img src="https://images.unsplash.com/photo-1519315901367-f34ff9154487?w=1600&q=80"
+                        alt="Pendaftaran Renang 2">
+                </div>
+                <div class="sinalSwim-carousel-slide">
+                    <img src="https://images.unsplash.com/photo-1600965962102-9d260a71890d?w=1600&q=80"
+                        alt="Pendaftaran Renang 3">
+                </div>
+            </div>
+
+            <div class="sinalSwim-carousel-overlay"></div>
+
+            <div class="sinalSwim-header-content">
+                <div class="sinalSwim-pill-badge" data-i18n="hero_badge">📝 REGISTRATION</div>
+                <h1 class="sinalSwim-header-title" data-i18n="hero_title">
+                    PENDAFTARAN LES RENANG
+                </h1>
+                <p class="sinalSwim-header-subtitle" data-i18n="hero_sub">
+                    Belajar Renang • Tingkatkan Kemampuan • Bangun Kepercayaan Diri
+                </p>
+                <div class="sinalSwim-header-cta">
+                    <a href="https://wa.me/6281370508839?text=Halo%20Coach%20Daniel,%20saya%20ingin%20mendaftar%20les%20renang%20Sinalsal%20Swimming%20Club"
+                        target="_blank" class="sinalSwim-btn sinalSwim-btn-primary" data-i18n="btn_daftar_header">Daftar
+                        Sekarang via WhatsApp →</a>
+                    <a href="#info-pendaftaran" class="sinalSwim-btn sinalSwim-btn-outline"
+                        data-i18n="btn_explore_info">Info Pendaftaran ↓</a>
+                </div>
+            </div>
+
+            <div class="sinalSwim-carousel-dots" id="regCarouselDots"></div>
+        </section>
+
+        <div class="sinalSwim-pill-nav-section">
+            <nav class="sinalSwim-pill-nav-wrapper" aria-label="Navigasi Menu Renang">
+                <a href="../Profile/profileRenang.html" class="sinalSwim-pill-btn" data-i18n="pill_profile">Profil</a>
+                <a href="../Biodata/biodataRenang.html" class="sinalSwim-pill-btn" data-i18n="pill_bio">Biodata</a>
+                <a href="../Jadwal/jadwalRenang.html" class="sinalSwim-pill-btn" data-i18n="pill_schedule">Jadwal &
+                    Lokasi</a>
+                <a href="../Pendaftaran/daftarRenang.html" class="sinalSwim-pill-btn active sinalSwim-pill-btn-cta"
+                    data-i18n="pill_register">Pendaftaran</a>
+            </nav>
+        </div>
+
+        <section class="sinalSwim-section" id="info-pendaftaran">
+
+            <div class="sinalSwim-section-header">
+                <div class="sinalSwim-pill-badge-center">
+                    <span>🏊‍♂️</span> <span data-i18n="section_reg_badge">PENDAFTARAN</span> <span>🏊‍♂️</span>
+                </div>
+                <h2 class="sinalSwim-section-title" data-i18n="reg_main_heading">DAFTAR SEKARANG!</h2>
+                <p class="sinalSwim-section-subtitle" data-i18n="reg_main_sub">Untuk informasi lebih lanjut dan
+                    pendaftaran les renang, langsung hubungi PC/Kontak Pribadi Coach Daniel.</p>
+            </div>
+
+            <div class="sinalSwim-direct-contact-card">
+                <div class="sinalSwim-direct-icon">📞</div>
+                <div class="sinalSwim-direct-info">
+                    <span class="sinalSwim-direct-label" data-i18n="direct_contact_label">Kontak Pribadi Coach:</span>
+                    <strong class="sinalSwim-direct-phone">0813-7050-8839</strong>
+                </div>
+                <a href="https://wa.me/6281370508839?text=Halo%20Coach%20Daniel,%20saya%20ingin%20mendaftar%20les%20renang"
+                    target="_blank" class="sinalSwim-btn sinalSwim-btn-primary sinalSwim-direct-btn"
+                    data-i18n="btn_hubungi_sekarang">
+                    <span>💬</span> Hubungi Coach di WhatsApp
+                </a>
+            </div>
+
+            <div class="sinalSwim-reg-details-grid">
+
+                <div class="sinalSwim-data-req-card">
+                    <div class="sinalSwim-card-heading">
+                        <span class="sinalSwim-heading-icon">📋</span>
+                        <h3 data-i18n="req_data_title">Data yang perlu disampaikan saat mendaftar:</h3>
+                    </div>
+
+                    <ul class="sinalSwim-data-list">
+                        <li>
+                            <span class="sinalSwim-list-num">1</span>
+                            <div class="sinalSwim-list-content">
+                                <strong data-i18n="item_1_title">Nama lengkap peserta</strong>
+                                <p data-i18n="item_1_sub">Tuliskan nama lengkap peserta yang akan mengikuti les.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="sinalSwim-list-num">2</span>
+                            <div class="sinalSwim-list-content">
+                                <strong data-i18n="item_2_title">Usia peserta</strong>
+                                <p data-i18n="item_2_sub">Usia peserta saat mendaftar (anak-anak/remaja/dewasa).</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="sinalSwim-list-num">3</span>
+                            <div class="sinalSwim-list-content">
+                                <strong data-i18n="item_3_title">Jenis kelamin</strong>
+                                <p data-i18n="item_3_sub">Laki-laki/Perempuan.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="sinalSwim-list-num">4</span>
+                            <div class="sinalSwim-list-content">
+                                <strong data-i18n="item_4_title">Tingkat kemampuan berenang</strong>
+                                <p data-i18n="item_4_sub">Contoh: Pemula total/takut air/bisa mengapung/ingin perbaikan
+                                    gaya.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="sinalSwim-list-num">5</span>
+                            <div class="sinalSwim-list-content">
+                                <strong data-i18n="item_5_title">Pilihan hari latihan</strong>
+                                <p data-i18n="item_5_sub">Pilihan hari antara Senin s/d Jumat (atau jadwal kesepakatan).
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="sinalSwim-list-num">6</span>
+                            <div class="sinalSwim-list-content">
+                                <strong data-i18n="item_6_title">Pilihan sesi latihan</strong>
+                                <p data-i18n="item_6_sub">Sesi I (15.00 - 16.30 WIB) atau Sesi II (16.30 - 18.00 WIB).
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="sinalSwim-list-num">7</span>
+                            <div class="sinalSwim-list-content">
+                                <strong data-i18n="item_7_title">Nomor WhatsApp orang tua/wali</strong>
+                                <p data-i18n="item_7_sub">Khusus untuk peserta anak-anak.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="sinalSwim-reg-notes-card">
+                    <div class="sinalSwim-card-heading">
+                        <span class="sinalSwim-heading-icon">📌</span>
+                        <h3 data-i18n="note_box_title">Catatan</h3>
+                    </div>
+
+                    <div class="sinalSwim-note-box-item">
+                        <div class="sinalSwim-note-bullet">✓</div>
+                        <p data-i18n="note_box_p1">
+                            Pendaftaran dilakukan secara langsung melalui kontak pribadi <strong>Coach Daniel</strong>.
+                        </p>
+                    </div>
+
+                    <div class="sinalSwim-note-box-item">
+                        <div class="sinalSwim-note-bullet">✓</div>
+                        <p data-i18n="note_box_p2">
+                            <strong>Slot latihan terbatas</strong>, sehingga peserta disarankan melakukan pendaftaran
+                            terlebih dahulu sebelum mengikuti latihan.
+                        </p>
+                    </div>
+
+                    <div class="sinalSwim-template-helper">
+                        <span class="sinalSwim-template-badge" data-i18n="template_badge">💡 Format Chat Pendaftaran
+                            Cepat:</span>
+                        <pre class="sinalSwim-template-code">Halo Coach Daniel, saya mau daftar les renang:
+• Nama:
+• Usia:
+• Gender:
+• Kemampuan:
+• Pilihan Hari:
+• Pilihan Sesi:
+• No. WA Ortu:</pre>
+                        <a href="https://wa.me/6281370508839?text=Halo%20Coach%20Daniel,%20saya%20mau%20daftar%20les%20renang:%0A•%20Nama:%20%0A•%20Usia:%20%0A•%20Gender:%20%0A•%20Kemampuan:%20%0A•%20Pilihan%20Hari:%20%0A•%20Pilihan%20Sesi:%20%0A•%20No.%20WA%20Ortu:%20"
+                            target="_blank" class="sinalSwim-btn sinalSwim-btn-outline"
+                            style="width: 100%; margin-top: 1rem;" data-i18n="btn_copy_chat">
+                            Kirim Format Ini ke WhatsApp ↗
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="sinalSwim-marketing-section">
+            <div class="sinalSwim-marketing-card">
+                <img src="../../Assets/Photos/logoClub.jpeg" alt="Logo Sinalsal Swimming Club"
+                    class="sinalSwim-marketing-logo">
+                <span class="sinalSwim-marketing-tag" data-i18n="mkt_tag">YUK, BELAJAR RENANG BERSAMA!</span>
+                <h2 class="sinalSwim-marketing-title">SINALSAL SWIMMING CLUB</h2>
+                <div class="sinalSwim-marketing-quote">
+                    <p data-i18n="mkt_quote">“Belajar dengan Aman, Berlatih dengan Disiplin, Berenang dengan Percaya
+                        Diri.”</p>
+                    <span class="sinalSwim-marketing-author">Coach Daniel P Lorenjo Sitopu, S.Or., Gr.</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Documentation -->
+        <section class="sinalSwim-section sinalSwim-activity-carousel-section" id="documentation-carousel">
+
+            <div class="sinalSwim-section-header">
+                <div class="sinalSwim-pill-badge-center">
+                    <span>🎬</span> <span data-i18n="section_doc_badge">DOKUMENTASI KEGIATAN</span> <span>🎬</span>
+                </div>
+                <h2 class="sinalSwim-section-title" data-i18n="section_doc_title">Dokumentasi Latihan</h2>
+            </div>
+
+            <div class="sinalSwim-doc-slider-wrapper">
+
+                <div class="sinalSwim-doc-slider-track" id="docSliderTrack">
+                    <div class="sinalSwim-doc-slide active" data-type="video">
+                        <div class="sinalSwim-doc-media-box">
+                            <video muted loop playsinline
+                                poster="https://images.unsplash.com/photo-1530549387789-4c1017266635?w=800&q=80">
+                                <source src="../../Assets/Videos/vid1.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+
+                    <div class="sinalSwim-doc-slide" data-type="image">
+                        <div class="sinalSwim-doc-media-box">
+                            <img src="../../Assets/Photos/pict1.jpeg"
+                                alt="Dokumentasi Foto 1">
+                        </div>
+                    </div>
+
+                    <div class="sinalSwim-doc-slide" data-type="video">
+                        <div class="sinalSwim-doc-media-box">
+                            <video muted loop playsinline
+                                poster="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=800&q=80">
+                                <source src="../../Assets/Videos/vid2.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+
+                    <div class="sinalSwim-doc-slide" data-type="image">
+                        <div class="sinalSwim-doc-media-box">
+                            <img src="../../Assets/Photos/pict2.jpeg"
+                                alt="Dokumentasi Foto 2">
+                        </div>
+                    </div>
+
+                    <div class="sinalSwim-doc-slide" data-type="image">
+                        <div class="sinalSwim-doc-media-box">
+                            <img src="../../Assets/Photos/pict3.jpeg"
+                                alt="Dokumentasi Foto 3">
+                        </div>
+                    </div>
+
+                    <div class="sinalSwim-doc-slide" data-type="video">
+                        <div class="sinalSwim-doc-media-box">
+                            <video muted loop playsinline
+                                poster="https://images.unsplash.com/photo-1560089000-7433a4ebbd64?w=800&q=80">
+                                <source src="../../Assets/Videos/vid3.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+
+                    <div class="sinalSwim-doc-slide" data-type="image">
+                        <div class="sinalSwim-doc-media-box">
+                            <img src="../../Assets/Photos/pict4.jpeg"
+                                alt="Dokumentasi Foto 4">
+                        </div>
+                    </div>
+
+                    <div class="sinalSwim-doc-slide" data-type="image">
+                        <div class="sinalSwim-doc-media-box">
+                            <img src="../../Assets/Photos/pict5.jpeg"
+                                alt="Dokumentasi Foto 5">
+                        </div>
+                    </div>
+
+                </div>
+
+                <button class="sinalSwim-doc-arrow sinalSwim-doc-prev" id="docPrevBtn"
+                    aria-label="Slide Sebelumnya">‹</button>
+                <button class="sinalSwim-doc-arrow sinalSwim-doc-next" id="docNextBtn"
+                    aria-label="Slide Selanjutnya">›</button>
+
+                <div class="sinalSwim-doc-dots" id="docDotsContainer"></div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="sinalSwim-footer" id="contact">
+        <div class="sinalSwim-footer-container">
+
+            <div class="sinalSwim-footer-brand">
+                <img src="../../Assets/Photos/logoClub.jpeg" alt="Logo" class="sinalSwim-footer-logo">
+                <span class="sinalSwim-brand-title">SINALSAL SWIMMING CLUB</span>
+            </div>
+
+            <div class="sinalSwim-footer-nav">
+                <a href="../../LandingPage/landingPage.html" data-i18n="nav_home">Beranda</a>
+                <a href="../Profile/profileRenang.html" data-i18n="pill_profile">Profil</a>
+                <a href="../Biodata/biodataRenang.html" data-i18n="pill_bio">Biodata</a>
+                <a href="../Jadwal/jadwalRenang.html" data-i18n="pill_schedule">Jadwal & Lokasi</a>
+            </div>
+
+            <div class="sinalSwim-socials">
+                <a href="https://wa.me/6281370508839" target="_blank" class="sinalSwim-social-btn sinalSwim-btn-wa">
+                    <span>☎</span> WhatsApp
+                </a>
+                <a href="https://instagram.com/sinalsal_swimming_club/" target="_blank"
+                    class="sinalSwim-social-btn sinalSwim-btn-ig">
+                    <span>🅾</span> Instagram
+                </a>
+            </div>
+
+            <p class="sinalSwim-copy" data-i18n="footer_copy">© 2026 Sinalsal Swimming. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <div class="sinalSwim-modal-backdrop" id="sinalSwimModalBackdrop">
+        <div class="sinalSwim-modal-box">
+            <div class="sinalSwim-modal-icon">🚀</div>
+            <h3 class="sinalSwim-modal-title" data-i18n="modal_title">Segera Diluncurkan!</h3>
+            <p class="sinalSwim-modal-desc" data-i18n="modal_desc">
+                Program ini akan segera diluncurkan! Untuk detail lebih lanjut hubungi kontak yang tersedia.
+            </p>
+            <div class="sinalSwim-modal-actions">
+                <a href="https://wa.me/6281370508839?text=Halo%20Coach,%20saya%20ingin%20tanya%20tentang%20program%20yang%20akan%20datang"
+                    target="_blank" class="sinalSwim-btn sinalSwim-btn-primary" data-i18n="modal_btn_wa">Hubungi
+                    WhatsApp</a>
+                <button type="button" class="sinalSwim-btn sinalSwim-btn-outline" id="sinalSwimModalCloseBtn"
+                    data-i18n="modal_btn_close">Tutup</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../LandingPage/navbar.js"></script>
+    <script src="../Pendaftaran/daftarRenang.js"></script>
 </body>
+
 </html>
